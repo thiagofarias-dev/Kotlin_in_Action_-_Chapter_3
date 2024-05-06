@@ -2,6 +2,7 @@ fun main() {
     example1()
     println()
     example2()
+    println()
     example3()
 }
 
@@ -26,19 +27,19 @@ fun example2(){
 }
 
 //Cap 3.2
-fun <T> joinToString(
+fun <T> joinToString( //Essa function implementa uma saída toString personalizada
     collection: Collection<T>,
     separator: String,
     prefix: String,
     postfix: String
 ): String {
-    val result = StringBuilder(prefix)
+    val result = StringBuilder(prefix)                  //adiciona o parentese antes do primeiro elemento da lista
     for ((index, element) in collection.withIndex()) {
-        if (index > 0) result.append(separator)
+        if (index > 0) result.append(separator)         //não adiciona separados antes do primeiro elemento da lista
         result.append(element)
 
     }
-    result.append(postfix)
+    result.append(postfix)                              //adiciona o parentese após o último elemento da lista
     return result.toString()
 }
 
@@ -47,3 +48,5 @@ fun example3(){
     println(joinToString(list, ";", "(", ")"))
     println(listOf(list))
 }
+
+
