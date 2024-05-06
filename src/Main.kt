@@ -45,8 +45,10 @@ fun <T> joinToString( //Essa function implementa uma saída toString personaliza
 
 fun example3(){
     val list = listOf(1,2,3)
+    println(listOf(list)) // modo padrão de listar uma string
     println(joinToString(list, ";", "(", ")"))
-    println(listOf(list))
+    println(joinToString(list, separator = " ", prefix = " ", postfix = ".")) // outra maneira de chamar o joinToString ficar mais legível
+
 }
 
 
