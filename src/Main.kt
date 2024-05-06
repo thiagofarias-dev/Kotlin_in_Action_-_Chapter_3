@@ -2,7 +2,7 @@ fun main() {
     example1()
     println()
     example2()
-
+    example3()
 }
 
 fun example1() {
@@ -25,3 +25,25 @@ fun example2(){
     println(numbers.max()) //.max() retorna o maior valor na lista
 }
 
+//Cap 3.2
+fun <T> joinToString(
+    collection: Collection<T>,
+    separator: String,
+    prefix: String,
+    postfix: String
+): String {
+    val result = StringBuilder(prefix)
+    for ((index, element) in collection.withIndex()) {
+        if (index > 0) result.append(separator)
+        result.append(element)
+
+    }
+    result.append(postfix)
+    return result.toString()
+}
+
+fun example3(){
+    val list = listOf(1,2,3)
+    println(joinToString(list, ";", "(", ")"))
+    println(listOf(list))
+}
