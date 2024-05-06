@@ -26,7 +26,7 @@ fun example2(){
     println(numbers.max()) //.max() retorna o maior valor na lista
 }
 
-//Cap 3.2
+//Cap 3.1
 fun <T> joinToString( //Essa function implementa uma saída toString personalizada
     collection: Collection<T>,
     separator: String,
