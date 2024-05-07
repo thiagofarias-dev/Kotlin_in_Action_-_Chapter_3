@@ -1,4 +1,3 @@
-
 fun main() {
     example1()
     println()
