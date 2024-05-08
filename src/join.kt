@@ -1,4 +1,5 @@
-@file:JvmName("StringFunctions")
+@file:JvmName("StringFunctions") //renomeia a classe a ser chamada no Java
+
 package strings
 //Cap 3.2
 fun <T> joinToString( //Essa function implementa uma saída toString personalizada (modo 2 - utilizando argumentos nomeados, possibilita a omissão de parâmetros durante a chamada da function e também a troca de ordem dos argumentos )
