@@ -2,8 +2,8 @@ import strings.join
 import strings.joinToString
 import strings.lastChar
 import strings.View
+import strings.showOff
 import strings.Button
-
 
 fun main() {
     example1()
