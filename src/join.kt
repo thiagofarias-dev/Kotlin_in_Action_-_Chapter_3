@@ -16,3 +16,9 @@ fun <T> Collection<T>.joinToString( //Essa function implementa uma saída toStri
     result.append(postfix)                              //adiciona o parentese após o último elemento da lista
     return result.toString()
 }
+
+fun Collection<String>.join(
+    separator: String = ", ",
+    prefix: String = "",
+    postfix: String = ""
+) = joinToString(separator,prefix, postfix)

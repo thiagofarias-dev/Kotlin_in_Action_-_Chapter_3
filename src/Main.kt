@@ -1,3 +1,4 @@
+import strings.join
 import strings.joinToString
 
 fun main() {
@@ -55,7 +56,9 @@ fun example3(){
     println(list.joinToString())                                       //modo 2 - não passando parâmetros
     println(list.joinToString("; "))                        //modo 2 - passando apenas parâmetro de separador
     println(list.joinToString(postfix = ";", prefix = "# "))        //modo 2 - passando parâmetros em ordem diferente e omitindo um deles
-
+    println()
+    println(listOf("one", "two", "eight").join())               //utilizando método como tipo receptor
+    //println(listOf(1, 2, 8).join())                           //não funciona pois a lista de objetos está definido como String e não aceita outro tipo
 }
 
 
