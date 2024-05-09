@@ -22,3 +22,18 @@ fun Collection<String>.join(
     prefix: String = "",
     postfix: String = ""
 ) = joinToString(separator,prefix, postfix)
+
+fun String.lastChar(): Char = this.get(length -1)       //adiciona o método lastChar() a classe String
+
+
+//Exemplo 3.6
+open class View {
+    open fun click() = println("View Clicked")
+}
+
+class Button: View() {                                          //Classe Button estende a classe View
+    override fun click() = println("Button Clicked")
+}
+
+fun View.showOff() = println("I'm a view!")
+fun Button.showOff() = println("I'm a Button!")

@@ -1,5 +1,9 @@
 import strings.join
 import strings.joinToString
+import strings.lastChar
+import strings.View
+import strings.Button
+
 
 fun main() {
     example1()
@@ -7,6 +11,16 @@ fun main() {
     example2()
     println()
     example3()
+    println()
+    println("#################")
+    println()
+    println("Kotlin".lastChar())        //chamando o método lastChar que foi estendido na classe String
+    println()
+    println("#################")
+    println()
+    val view: View = Button()
+    view.click()
+    view.showOff()          //Aqui como a função showOff() é extensão de ambas as classes View w Button, será chamado a extensão da classe correspondente, no caso View. Pois as extensões não podem ser sobrescritas por não fazerem parte da classe.
 }
 
 fun example1() {
