@@ -48,13 +48,13 @@ fun example2(){
 fun example3(){
     val list = listOf(1,2,3)
     println(listOf(list)) // modo padrão de listar uma string
-    println(joinToString(list, ";", "(", ")"))
-    println(joinToString(list, separator = " ", prefix = " ", postfix = ".")) // outra maneira de chamar o joinToString ficar mais legível
+    println(list.joinToString(";", "(", ")"))
+    println(list.joinToString(separator = " ", prefix = " ", postfix = ".")) // outra maneira de chamar o joinToString ficar mais legível
     println()
-    println(joinToString(list, ", ", "", "")) //modo 2 - passando todos os parâmetros
-    println(joinToString(list))                                       //modo 2 - não passando parâmetros
-    println(joinToString(list,"; "))                        //modo 2 - passando apenas parâmetro de separador
-    println(joinToString(list, postfix = ";", prefix = "# "))        //modo 2 - passando parâmetros em ordem diferente e omitindo um deles
+    println(list.joinToString(", ", "", "")) //modo 2 - passando todos os parâmetros
+    println(list.joinToString())                                       //modo 2 - não passando parâmetros
+    println(list.joinToString("; "))                        //modo 2 - passando apenas parâmetro de separador
+    println(list.joinToString(postfix = ";", prefix = "# "))        //modo 2 - passando parâmetros em ordem diferente e omitindo um deles
 
 }
 
