@@ -2,7 +2,7 @@
 
 package strings
 //Cap 3.2
-fun <T> Collection<T>.joinToString( //Essa function implementa uma saída toString personalizada (modo 2 - utilizando argumentos nomeados, possibilita a omissão de parâmetros durante a chamada da function e também a troca de ordem dos argumentos )
+fun <T> Collection<T>.joinToString(//Essa function implementa uma saída toString personalizada (modo 2 - utilizando argumentos nomeados, possibilita a omissão de parâmetros durante a chamada da function e também a troca de ordem dos argumentos)
     separator: String = ", ",
     prefix: String = "",
     postfix: String = ""
@@ -23,10 +23,10 @@ fun Collection<String>.join(
     postfix: String = ""
 ) = joinToString(separator,prefix, postfix)
 
-//Examplo 3.1
+//Exemplo 3.1
 //fun String.lastChar(): Char = this.get(length -1)       //adiciona o método lastChar() a classe String
 
-//Examplo 3.7
+//Exemplo 3.7
 val String.lastChar: Char
     get() = get(length - 1)
 
