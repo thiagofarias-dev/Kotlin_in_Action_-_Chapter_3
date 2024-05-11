@@ -8,19 +8,29 @@ import strings.Button
 fun main() {
     example1()
     println()
+    println("#################")
+    println()
     example2()
+    println()
+    println("#################")
     println()
     example3()
     println()
     println("#################")
     println()
-    println("Kotlin".lastChar())        //chamando o método lastChar que foi estendido na classe String
+    example341()
     println()
     println("#################")
     println()
-    val view: View = Button()
-    view.click()
-    view.showOff()          //Aqui como a função showOff() é extensão de ambas as classes View w Button, será chamado a extensão da classe correspondente, no caso View. Pois as extensões não podem ser sobrescritas por não fazerem parte da classe.
+    example33()
+    println()
+    println("#################")
+    println()
+    example36()      //Aqui como a função showOff() é extensão de ambas as classes View e Button, será chamado a extensão da classe correspondente, no caso View. Pois as extensões não podem ser sobrescritas por não fazerem parte da classe.
+    println()
+    println("#################")
+    println()
+    example341()
 }
 
 fun example1() {
@@ -72,10 +82,34 @@ fun example3(){
     println(list.joinToString(postfix = ";", prefix = "# "))        //modo 2 - passando parâmetros em ordem diferente e omitindo um deles
     println()
     println(listOf("one", "two", "eight").join())               //utilizando método como tipo receptor
-    //println(listOf(1, 2, 8).join())                           //não funciona pois a lista de objetos está definido como String e não aceita outro tipo
+    //println(listOf(1, 2, 8).join())                           //não funciona, pois a lista de objetos está definido como String e não aceita outro tipo
 }
 
+fun example33(){
+    /*
+println("Kotlin".lastChar())        //Exemplo 3.3 chamando o método lastChar que foi estendido na classe String
+*/
+    println("Kotlin".lastChar)          // Exemplo 3.7 chamando o lastChar utilizando uma propriedade de extensão
+    println("Kotlin".lastChar)          // Exemplo 3.8 chamando o lastChar utilizando uma propriedade de extensão mutável
+    val sb = StringBuilder("Kotlin?")
+    sb.lastChar = '!'
+    println(sb)
 
+}
+
+fun example36(){
+    val view: View = Button()
+    view.click()
+    view.showOff()          //Aqui como a função showOff() é extensão de ambas as classes View w Button, será chamado a extensão da classe correspondente, no caso View. Pois as extensões não podem ser sobrescritas por não fazerem parte da classe.
+}
+
+fun example341(){
+    val strings: List<String> = listOf("first", "second", "fourteenth")
+    println(strings.last())
+
+    val numbers: Collection<Int> = setOf(1, 14, 2)
+    println(numbers.max())
+}
 
 
 

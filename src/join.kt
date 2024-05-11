@@ -23,8 +23,12 @@ fun Collection<String>.join(
     postfix: String = ""
 ) = joinToString(separator,prefix, postfix)
 
-fun String.lastChar(): Char = this.get(length -1)       //adiciona o método lastChar() a classe String
+//Examplo 3.1
+//fun String.lastChar(): Char = this.get(length -1)       //adiciona o método lastChar() a classe String
 
+//Examplo 3.7
+val String.lastChar: Char
+    get() = get(length - 1)
 
 //Exemplo 3.6
 open class View {
@@ -37,3 +41,10 @@ class Button: View() {                                          //Classe Button 
 
 fun View.showOff() = println("I'm a view!")
 fun Button.showOff() = println("I'm a Button!")
+
+//Exemplo 3.8 - Declarando uma propriedade de extensão mutável
+var StringBuilder.lastChar: Char
+    get() = get(length - 1)
+    set(value: Char) {
+        this.setCharAt(length - 1, value)
+    }
