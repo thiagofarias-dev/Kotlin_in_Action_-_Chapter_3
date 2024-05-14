@@ -4,6 +4,7 @@ import strings.lastChar
 import strings.View
 import strings.showOff
 import strings.Button
+import strings.*
 
 fun main() {
     example1()
@@ -31,6 +32,10 @@ fun main() {
     println("#################")
     println()
     example341()
+    println()
+    println("#################")
+    println()
+    example39()
 }
 
 fun example1() {
@@ -110,8 +115,5 @@ fun example341(){
     val numbers: Collection<Int> = setOf(1, 14, 2)
     println(numbers.max())
 }
-
-
-
 
 
