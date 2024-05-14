@@ -36,6 +36,10 @@ fun main() {
     println("#################")
     println()
     example39()
+    println()
+    println("#################")
+    println()
+    example353()
 }
 
 fun example1() {

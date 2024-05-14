@@ -75,3 +75,10 @@ fun parsePathRegex(path: String) {
         println("Dir: $directory, name: $fileName, ext: $extension")
     }
 }
+
+fun example353() {
+    val kotlinlogo = """|  //
+                       .| //
+                       .|/ \"""
+    println(kotlinlogo.trimMargin("."))
+}
